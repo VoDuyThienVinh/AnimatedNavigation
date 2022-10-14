@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+:root {
+  --color-gray: #eafbff;
+  --color-blue: #5290f9;
+
+  --color-white: #ffffff;
+
+  --color-black: #000000;
+
+  --value-nav-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  --value-body-background-image: linear-gradient(to bottom, #eafbff 0%, #eafbff 50%, #5290f9 50%, #5290f9 100%);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -18,8 +30,8 @@ html {
 
 body {
   font-size: 1.1rem;
-  background-color: #eafbff;
-  background-image: linear-gradient(to bottom, #eafbff 0%, #eafbff 50%, #5290f9 50%, #5290f9 100%);
+  background-color: var(--color-gray);
+  background-image: var(--value-body-background-image);
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
@@ -28,14 +40,14 @@ body {
 }
 
 nav {
-  background-color: #fff;
+  background-color: var(--color-white);
   padding: 20px;
   width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 3px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--value-nav-box-shadow);
   transition: width 0.6s linear;
 }
 
@@ -67,13 +79,13 @@ nav.active ul li {
 
 nav ul a {
   position: relative;
-  color: #000;
+  color: var(--color-black);
   text-decoration: none;
   margin: 0 10px;
 }
 
 .icon {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   border: 0;
   cursor: pointer;
   padding: 0;
@@ -87,7 +99,7 @@ nav ul a {
 }
 
 .icon .line {
-  background-color: #5290f9;
+  background-color: var(--color-blue);
   height: 2px;
   width: 20px;
   position: absolute;
